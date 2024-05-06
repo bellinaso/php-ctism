@@ -6,8 +6,14 @@
         if($email == 'a@a' && $senha == '123') {
             //Cria a sessão
             session_start();
-            $_SESSION["login"] = $email;
+            $_SESSION['login'] = $email;
 
+            if(isset($_POST['save-email'])) {
+                setcookie('email', $email, time() + (86400), '/');
+            }
+            else {
+                setcookie('email', $email, time() - (3600), '/');
+            }
             header('location:../home.php');
         }
         else {

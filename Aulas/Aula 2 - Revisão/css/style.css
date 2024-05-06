@@ -59,7 +59,6 @@ main {
 .form td {
     text-align: start;
     min-width: 5rem;
-    width: 50%;
     padding: .3rem 0rem .3rem 0rem;
     border-collapse: collapse;
 }
