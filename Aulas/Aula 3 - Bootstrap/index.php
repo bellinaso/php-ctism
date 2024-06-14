@@ -28,10 +28,11 @@
             <div class="alert alert-warning">
                 <strong>Atenção:</strong> é necessário cadastrar todas as marcas
             </div>
-            <form>
+            <form method="$_POST" action="" class="was-validated">
                 <div class="mb-3 mt-3">
                     <label for="nome" class="form-label">Nome:</label>
-                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Insira o nome do automóvel">
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Insira o nome do automóvel" required>
+                    <div class="invalid-feedback">Você precisa preencher este campo!</div>
                 </div>
                 <div class="mb-3 mt-3">
                     <div class="form-check">
@@ -49,18 +50,29 @@
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="modelo"></label>
-                    <select name="modelo" id="modelo" class="form-select" multiple>
+                    <select name="modelo" id="modelo" class="form-select"> <!-- multiple -->
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                     </select>
                 </div>
+                <div class="mb-3 mt-3">
+                    <input type="radio" class="form-check-input" name="option-radio" id="white-color" value="white-color">
+                    <label for="white-color">Branco</label>
+                    <input type="radio" class="form-check-input" name="option-radio" id="gray-color" value="gray-color">
+                    <label for="gray-color">Branco</label>
+                    <input type="radio" class="form-check-input" name="option-radio" id="black-color" value="black-color">
+                    <label for="black-color">Branco</label>
+                </div>
+                <div class="mb-3 mt-3">
+                    <input type="submit" value="Escolher carro" class="btn btn-success">
+                    <a href="#" class="btn btn-success">Clique aqui</a>
+                </div>
+                <div class="mb-3 mt-3">
+
+                </div>
             </form>
-        </div>
-        <div class="container-fluid">
-            <h1>Cadastro de automóveis</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quia, quae velit dicta earum quaerat? Accusantium ex, minima distinctio neque maxime nam voluptatibus atque suscipit doloribus culpa magni reprehenderit fuga.</p>
         </div>
     </main>
 </body>
