@@ -50,7 +50,10 @@
 <body>
     <main class="fluid-container d-flex flex-column justify-content-around align-items-center">
 
-        <img src="/imgs/Bicho Chique_transparent.png" alt="logo" style="width: 400px;">
+        <img src="/imgs/logo.png" alt="logo"
+        style="
+        width: 400px;
+        filter: drop-shadow(0 0 5rem #fff);">
 
         <?php
             if($_POST) {
