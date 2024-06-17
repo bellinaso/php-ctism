@@ -69,9 +69,6 @@
                     <input type="submit" value="Escolher carro" class="btn btn-success">
                     <a href="#" class="btn btn-success">Clique aqui</a>
                 </div>
-                <div class="mb-3 mt-3">
-
-                </div>
             </form>
         </div>
     </main>
