@@ -14,6 +14,8 @@
             header('location:/cadastro.php?cod=403');
         }
         else {
+            @session_start();
+            $_SESSION['login'] = $cpf;
             header('location:/locacao.php');
         }
 

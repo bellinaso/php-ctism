@@ -3,58 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Entrar</title>
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <style>
-        img {
-            filter: drop-shadow(0 0 2rem #fff);
-        }
+    <link rel="stylesheet" href="css/login-register-style.css">
 
-        .form-box {
-            box-shadow: 0 0 5px 0;
-            background: rgba(0, 0, 0, 0);
-            backdrop-filter: blur(15px);
-        }
-    </style>
 </head>
-<body
-style="
-color: #fff;
-background: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%), url(imgs/quadra-de-beach-tennis2.png);
-background-repeat: no-repeat;
-background-position: 10%;
-background-size: cover;
-min-height: 100vh;">
+<body>
     <main class="fluid-container d-flex flex-column justify-content-around align-items-center">
-        <img src="imgs/arena_logo.fw-min.png" alt="logo" class="align-self-center p-5"
-        style="
-            width: 300px;
-            filter: drop-shadow(0 0 5rem #fff);">
-        <div class="col-md-8 col-lg-6 p-3 mb-5 rounded-4 form-box">
-            <div class="d-flex flex-row">
-                <div class="align-self-start">
-                    <a href="index.php">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="align-self-center">
-                    <h2 class="text-center">Login</h2>
-                </div>
+        <img src="imgs/arena_logo.fw-min.png" alt="logo" class="align-self-center p-5">
+
+        <div class="col-lg-5 col-md-8 col-sm-10 col-10 p-3 mb-5 rounded-4 form-box">
+            <div class="align-self-start d-flex">
+                <a href="index.php" class="text-light go-back-button">
+                    <svg fill="#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                        width="1.3rem" height="1.3rem" viewBox="0 0 30.725 30.725"
+                        xml:space="preserve">
+                        <g>
+                            <path d="M24.078,26.457c0.977,0.978,0.977,2.559,0,3.536c-0.488,0.488-1.128,0.731-1.77,0.731c-0.639,0-1.278-0.243-1.768-0.731
+                                L5.914,15.362l14.629-14.63c0.977-0.977,2.559-0.976,3.535,0c0.977,0.977,0.977,2.56,0,3.536L12.984,15.362L24.078,26.457z"/>
+                        </g>
+                    </svg>
+                    <strong>Voltar</strong>
+                </a>
+            </div>
+            <div class="align-self-center">
+                <h2 class="text-center">Entrar</h2>
             </div>
 
             <form action="/controller/loginController.php" method="post">
                 <?php
-                    if(isset($_REQUEST) && @$_REQUEST['cod'] == '400') {
-                        echo '<div class="alert alert-danger"><strong class="text-danger"> Algo deu errado!</strong><span class="text-danger"> Preencha todas as informações corretamente.</span></div>';
-                    }
-                    else if(isset($_REQUEST) && @$_REQUEST['cod'] == '401') {
+                    if(isset($_REQUEST) && @$_REQUEST['cod'] == '401') {
                         echo '<div class="alert alert-danger"><strong class="text-danger"> Algo deu errado!</strong><span class="text-danger"> Usuário ou senha incorreta!</span></div>';
                     }
                 ?>
