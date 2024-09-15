@@ -20,17 +20,28 @@
 
     <body>
         <header>
-            
             <nav class="nav justify-content-center">
                 <a href="arrayComum.php" class="nav-link active">Array comum</a>
                 <a href="arrayAssociativo.php" class="nav-link">Array Associativo</a>
+                <a href="arrayMultidimensional.php" class="nav-link">Array Multidimensional</a>
+                <a href="arrayMultidimensionalAssociativo.php" class="nav-link">Array Multidimensional Associativo</a>
                 <a href="#" class="nav-link disabled">Disabled link</a>
             </nav>    
-        
         </header>
-        <main>
-
-
+        <main class="container">
+            <form action="/src/controller/usuarioController.php" method="post">
+                <div class="mb-3">
+                    <label for="" class="form-label">Email</label>
+                    <input type="text" class="form-control" name="email" id="" aria-describedby="helpId" placeholder="Insira seu email"
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" id="" placeholder="Insira sua senha"/>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                
+            </form>
         </main>
         <footer>
 
